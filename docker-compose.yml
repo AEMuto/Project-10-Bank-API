@@ -1,0 +1,9 @@
+services:
+  api:
+    build: .
+    restart: unless-stopped
+    environment:
+      - DATABASE_URL=mongodb+srv://argentBank:W8DYFREJCcSV3M8s@argentbankdb.gszgr.mongodb.net/?retryWrites=true&w=majority
+      - NODE_ENV=production
+    ports:
+      - "3001:3001"
